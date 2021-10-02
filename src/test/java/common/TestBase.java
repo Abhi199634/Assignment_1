@@ -15,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBase {
 	
+	static String path = System.getProperty("user.dir");
+	
 	
 	public static WebDriver driver;
 	public static Properties prop;
@@ -25,7 +27,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(("C:\\Users\\abhishek.gupta05\\eclipse-workspace\\assignment\\config.properties"));
+			FileInputStream ip = new FileInputStream((path+"\\config.properties"));
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -36,10 +38,13 @@ public class TestBase {
 	
 	
 	public static void initialization(){
+		
 		String browserName = prop.getProperty("browser");
 		
+		
+		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhishek.gupta05\\eclipse-workspace\\assignment\\Application\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", path+"\\Application\\chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}
 		
