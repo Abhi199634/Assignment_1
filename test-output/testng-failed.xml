@@ -5,8 +5,8 @@
     <classes>
       <class name="assignment.flightbooking">
         <methods>
+          <include name="initialization"/>
           <include name="teardown"/>
-          <include name="setup"/>
           <include name="flight_booking"/>
         </methods>
       </class> <!-- assignment.flightbooking -->

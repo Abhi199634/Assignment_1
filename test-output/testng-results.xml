@@ -2,34 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-03T00:01:34 IST" name="Default suite" finished-at="2021-10-03T00:01:55 IST" duration-ms="21379">
+  <suite started-at="2021-10-03T08:34:20 IST" name="Default suite" finished-at="2021-10-03T08:34:48 IST" duration-ms="27493">
     <groups>
     </groups>
-    <test started-at="2021-10-03T00:01:34 IST" name="Default test" finished-at="2021-10-03T00:01:55 IST" duration-ms="21379">
+    <test started-at="2021-10-03T08:34:20 IST" name="Default test" finished-at="2021-10-03T08:34:48 IST" duration-ms="27493">
       <class name="assignment.flightbooking">
-        <test-method is-config="true" signature="setup()[pri:0, instance:assignment.flightbooking@6a84a97d]" started-at="2021-10-03T00:01:34 IST" name="setup" finished-at="2021-10-03T00:01:46 IST" duration-ms="11487" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:assignment.flightbooking@20f5239f]" started-at="2021-10-03T08:34:20 IST" name="initialization" finished-at="2021-10-03T08:34:27 IST" duration-ms="6700" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="flight_booking()[pri:0, instance:assignment.flightbooking@6a84a97d]" started-at="2021-10-03T00:01:46 IST" name="flight_booking" finished-at="2021-10-03T00:01:55 IST" duration-ms="9288" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        </test-method> <!-- initialization -->
+        <test-method signature="flight_booking()[pri:0, instance:assignment.flightbooking@20f5239f]" started-at="2021-10-03T08:34:27 IST" name="flight_booking" finished-at="2021-10-03T08:34:48 IST" duration-ms="20436" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (789, -30)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@data-test-attrib='onward-view']"}
   (Session info: chrome=94.0.4606.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'L-DW2D593', ip: '10.91.0.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'L-DW2D593', ip: '10.20.69.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bf0b0200b0c4a6bc4783b327ffbc02f0]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0655ab1d525dfe8366c662b9639d9aeb
+*** Element info: {Using=xpath, value=//div[@data-test-attrib='onward-view']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (789, -30)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@data-test-attrib='onward-view']"}
   (Session info: chrome=94.0.4606.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'L-DW2D593', ip: '10.91.0.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'L-DW2D593', ip: '10.20.69.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bf0b0200b0c4a6bc4783b327ffbc02f0
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0655ab1d525dfe8366c662b9639d9aeb
+*** Element info: {Using=xpath, value=//div[@data-test-attrib='onward-view']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -41,9 +45,11 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at assignment.flightbooking.flight_booking(flightbooking.java:58)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at assignment.flightbooking.flight_booking(flightbooking.java:81)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,11 +80,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flight_booking -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:assignment.flightbooking@6a84a97d]" started-at="2021-10-03T00:01:55 IST" name="teardown" finished-at="2021-10-03T00:01:55 IST" duration-ms="546" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:assignment.flightbooking@20f5239f]" started-at="2021-10-03T08:34:48 IST" name="teardown" finished-at="2021-10-03T08:34:48 IST" duration-ms="328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

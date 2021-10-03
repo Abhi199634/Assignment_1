@@ -11,6 +11,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 
 public class TestBase {
@@ -36,7 +38,7 @@ public class TestBase {
 		}
 	}
 	
-	
+	@BeforeMethod
 	public static void initialization(){
 		
 		String browserName = prop.getProperty("browser");
@@ -75,6 +77,12 @@ public class TestBase {
 	public static  void scrolldown() {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,300)");
+		js.executeScript("window.scrollBy(0,250)");
 	}
+	
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
+
 }

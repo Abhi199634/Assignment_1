@@ -6,8 +6,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import common.TestBase;
@@ -19,15 +17,6 @@ public class flightbooking extends TestBase{
 	public flightbooking() {
 		
 		super();
-	}
-
-	
-	@BeforeMethod
-	public void setup() {
-		
-		initialization();
-		System.out.println("The title of page is "+driver.getTitle());
-		
 	}
 	
 	@Test
@@ -74,24 +63,44 @@ public class flightbooking extends TestBase{
 					+ "bc-neutral-100 c-pointer pr-2 pl-3 pt-2 pb-2 ba br-4 h-8 c-neutral-900']"));
 			svg.get(0).click();
 			
-			WebElement depart_on = driver.findElement(By.xpath("//div[@class='DayPicker-Body']//div[@class='DayPicker-Week']//div[@class='DayPicker-Day DayPicker-Day--start DayPicker-Day--end DayPicker-Day--selected DayPicker-Day--today']"));
+			WebElement depart_on = driver.findElement(By.xpath("//div[@class='DayPicker-Body']//div[@class='DayPicker-Week']//div[@class='DayPicker-Day DayPicker-Day--start DayPicker-Day--end DayPicker-Day--rightEdge DayPicker-Day--selected DayPicker-Day--today']"));
 			
 			action.doubleClick(depart_on).perform();
 			Thread.sleep(4000);
 			
 			svg.get(1).click();
 			
-			WebElement return_on = driver.findElement(By.xpath("//div[@class='DayPicker-Body']//div[@class='DayPicker-Week']//div[@class='DayPicker-Day DayPicker-Day--rightEdge']"));
-			action.doubleClick(return_on).perform();
+			List<WebElement> return_on = driver.findElements(By.xpath("//div[@class='DayPicker-Body']//div[@class='DayPicker-Week']//div[@class='DayPicker-Day DayPicker-Day--rightEdge']"));
+			action.doubleClick(return_on.get(7)).perform();
 			
 			driver.findElement(By.xpath("//button[@class='px-7 bg-primary-500 hover:bg-primary-600 c-white bc-transparent c-pointer w-100p py-2 px-5 h-10 fs-4 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border']")).click();
 			
+			Thread.sleep(5000);
+			System.out.println("The title of the page after enterting the booking details are "+ driver.getTitle());
+			
+			System.out.println("The url of the page after enterting the booking details are "+ driver.getCurrentUrl());
+			
+			WebElement on_board_flight = driver.findElement(By.xpath("//div[@data-test-attrib='onward-view']"));
+			List<WebElement> on_board_flight_list = on_board_flight.findElements(By.xpath("//div[@class='rt-tuple-container__details ms-grid-row-2']"));
+			System.out.println("The total onborad flight showed are "+ on_board_flight_list.size());
+			
+			WebElement return_flight = driver.findElement(By.xpath("//div[@data-test-attrib='return-view']"));
+			List<WebElement> return_flight_list = return_flight.findElements(By.xpath("//div[@class='rt-tuple-container__details ms-grid-row-2']"));
+			System.out.println("The total onborad flight showed are "+ return_flight_list.size());
+			
+			
+			on_board_flight_list.get(2).click();
+			return_flight_list.get(2).click();
+			
+			String price = driver.findElement(By.xpath("//span[@class='c-neutral-900 mx-4  fw-700 flex flex-right fs-7']")).getText();
+			
+			System.out.println("The total price is "+ price);
+			
+			System.out.println("now clicking the book button after selecting the flight");
+			driver.findElement(By.xpath("//button[@class='bg-primary-500 hover:bg-primary-600 c-white bc-transparent c-pointer py-1 px-3 h-8 fs-3 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border']")).click();
+			
+			System.out.println("The current url of the page is "+driver.getCurrentUrl()+ "and the title of the page is "+ driver.getTitle());
+			
 		}
 	}
-	
-	@AfterMethod
-	public void teardown() {
-		driver.quit();
-	}
-
 }
