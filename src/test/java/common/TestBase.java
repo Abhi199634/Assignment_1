@@ -82,10 +82,14 @@ public class TestBase {
 		js.executeScript("window.scrollBy(0,250)");
 	}
 	
-	public static void ScrolltoEnd() {
+	public static void ScrolltoEnd(int count) {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
+		for(int i=0;i<count;i++) {
+			
+			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		}
 	}
 	
 	public static void ScrolltoTop() {

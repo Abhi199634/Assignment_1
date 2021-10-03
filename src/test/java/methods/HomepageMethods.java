@@ -122,25 +122,36 @@ public class HomepageMethods  extends TestBase  {
 		
 		System.out.println("The url of the page after switching to child window is "+ driver.getCurrentUrl());
 		
-		TestBase.ScrolltoEnd();
+		TestBase.ScrolltoEnd(2);
 		
 		Thread.sleep(4000);
 		
 		ArrayList<String > ar = gt.get_data();
 		
-		for(int i=0;i<1;i++) {
+		List<WebElement> parent = driver.findElements(By.xpath("//div[@class='d-inline-block']"));
 			
-			driver.findElement(By.xpath("//button[@class='px-7 bg-primary-500 hover:bg-primary-600 c-white bc-transparent c-pointer w-100p py-2 px-5 h-10 fs-4 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border']")).click();
+		parent.get(0).click();
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//div[@class='px-7 mr-2 bg-primary-500 hover:bg-primary-600 c-white bc-transparent"
+				+ " c-pointer py-2 px-5 h-10 fs-4 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border'")).click();
 			
-		}
+		driver.findElement(By.xpath("//div[@class='p-relative']//input[@class='field bw-1 bs-solid w-100p p-2 box-border br-4 fs-2 c-neutral-900 h-9 fs-3 bc-neutral-100 c-neutral-900 focus:bc-secondary-500' "
+				+ "and @type='text' and @placeholder='Mobile number']")).sendKeys(ar.get(0));
 		
-		/*List<WebElement> input = driver.findElements(By.xpath("//input[@class='field bw-1 bs-solid w-100p p-2 box-border br-4 fs-2 c-neutral-900 h-9 fs-3 bc-error-500']"));
+		System.out.println("Mobile number Entered");
 		
-		input.get(0).sendKeys(ar.get(0));
+		driver.findElement(By.xpath("//div[@class='p-relative']//input[@class='field bw-1 bs-solid w-100p p-2 box-border br-4 fs-2 c-neutral-900 h-9 fs-3 bc-neutral-100 c-neutral-900 focus:bc-secondary-500' "
+				+ "and @type='text' and @placeholder='Email address']")).sendKeys(ar.get(1));
 		
-		input.get(0).sendKeys(ar.get(1));
+		System.out.println("Email ID  Entered");
 		
-		Thread.sleep(4000);*/
+		parent.get(1).click();
+		
+		System.out.println("Continue button clicked");
+			
+		Thread.sleep(4000);
 		
 	}
 }
