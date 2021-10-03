@@ -3,8 +3,10 @@ package common;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -80,9 +82,41 @@ public class TestBase {
 		js.executeScript("window.scrollBy(0,250)");
 	}
 	
+	public static void ScrolltoEnd() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	
+	public static void ScrolltoTop() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+		
+	}
+	
+	public  static void windowhandles(String parent_window) {
+		
+		Set<String>s=driver.getWindowHandles();
+		Iterator<String> I1= s.iterator();
+		while(I1.hasNext())
+		{
+
+		String child_window=I1.next();
+
+
+		if(!parent_window.equals(child_window))
+		{
+		driver.switchTo().window(child_window);
+
+		System.out.println(driver.switchTo().window(child_window).getTitle());
+		}
+	}
+	}		
+	
 	@AfterMethod
 	public void teardown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }
