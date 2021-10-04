@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-04T10:34:02 IST" name="Default suite" finished-at="2021-10-04T10:34:42 IST" duration-ms="40249">
+  <suite started-at="2021-10-04T12:32:26 IST" name="Default suite" finished-at="2021-10-04T12:33:08 IST" duration-ms="42050">
     <groups>
     </groups>
-    <test started-at="2021-10-04T10:34:02 IST" name="Default test" finished-at="2021-10-04T10:34:42 IST" duration-ms="40249">
+    <test started-at="2021-10-04T12:32:26 IST" name="Default test" finished-at="2021-10-04T12:33:08 IST" duration-ms="42050">
       <class name="assignment.flightbooking">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T10:34:02 IST" name="initialization" finished-at="2021-10-04T10:34:09 IST" duration-ms="7019" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T12:32:26 IST" name="initialization" finished-at="2021-10-04T12:32:32 IST" duration-ms="6139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="flight_booking()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T10:34:09 IST" name="flight_booking" finished-at="2021-10-04T10:34:42 IST" duration-ms="33056" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="flight_booking()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T12:32:32 IST" name="flight_booking" finished-at="2021-10-04T12:33:08 IST" duration-ms="35854" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[element click intercepted: Element is not clickable at point (182, 1069)
   (Session info: chrome=94.0.4606.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'L-DW2D593', ip: '10.91.0.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'L-DW2D593', ip: '172.16.2.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57950}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 51717f1a89b8cc59a221184f926f7b85]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b0bd2b41adc1c62541125bac0f84b7af]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (182, 1069)
   (Session info: chrome=94.0.4606.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'L-DW2D593', ip: '10.91.0.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'L-DW2D593', ip: '172.16.2.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57950}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 51717f1a89b8cc59a221184f926f7b85
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ABHISH~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b0bd2b41adc1c62541125bac0f84b7af
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -41,10 +41,10 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-at methods.HomepageMethods.flightDetails(HomepageMethods.java:80)
-at assignment.flightbooking.flight_booking(flightbooking.java:20)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at methods.HomepageMethods.userDetails(HomepageMethods.java:134)
+at assignment.flightbooking.flight_booking(flightbooking.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,11 +75,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flight_booking -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T10:34:42 IST" name="teardown" finished-at="2021-10-04T10:34:42 IST" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:assignment.flightbooking@2df9b86]" started-at="2021-10-04T12:33:08 IST" name="teardown" finished-at="2021-10-04T12:33:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
