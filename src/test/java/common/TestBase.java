@@ -120,7 +120,7 @@ public class TestBase {
 	
 	@AfterMethod
 	public void teardown() {
-		//driver.quit();
+		driver.quit();
 	}
 
 }

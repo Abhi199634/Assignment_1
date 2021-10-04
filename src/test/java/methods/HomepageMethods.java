@@ -61,7 +61,8 @@ public class HomepageMethods  extends TestBase  {
 					+ "bc-neutral-100 c-pointer pr-2 pl-3 pt-2 pb-2 ba br-4 h-8 c-neutral-900']"));
 			svg.get(0).click();
 			
-			WebElement depart_on = driver.findElement(By.xpath("//div[@class='DayPicker-Body']//div[@class='DayPicker-Week']//div[@class='DayPicker-Day DayPicker-Day--start DayPicker-Day--end DayPicker-Day--rightEdge DayPicker-Day--selected DayPicker-Day--today']"));
+			
+			WebElement depart_on = driver.findElement(By.xpath("//div[@class='DayPicker-Day DayPicker-Day--start DayPicker-Day--end DayPicker-Day--leftEdge DayPicker-Day--selected DayPicker-Day--today']"));
 			
 			action.doubleClick(depart_on).perform();
 			Thread.sleep(4000);
@@ -134,8 +135,10 @@ public class HomepageMethods  extends TestBase  {
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//div[@class='px-7 mr-2 bg-primary-500 hover:bg-primary-600 c-white bc-transparent"
-				+ " c-pointer py-2 px-5 h-10 fs-4 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border'")).click();
+		TestBase.ScrolltoEnd(2);
+		
+		driver.findElement(By.xpath("//button[@class='px-7 mr-2 bg-primary-500 hover:bg-primary-600 c-white bc-transparent"
+				+ " c-pointer py-2 px-5 h-10 fs-4 fw-600 t-all button bs-solid tp-color td-500 bw-1 br-4 lh-solid box-border']")).click();
 			
 		driver.findElement(By.xpath("//div[@class='p-relative']//input[@class='field bw-1 bs-solid w-100p p-2 box-border br-4 fs-2 c-neutral-900 h-9 fs-3 bc-neutral-100 c-neutral-900 focus:bc-secondary-500' "
 				+ "and @type='text' and @placeholder='Mobile number']")).sendKeys(ar.get(0));
